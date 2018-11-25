@@ -30,7 +30,6 @@
         this.setExtContent(() => {
 
             let cg = new ContentGenerator({
-            
 					autoplay: true,
 					audio: {
 						src: "https://test.playleaks.com/dev/contentgen/examples/music.mp3",
@@ -42,7 +41,29 @@
 						introTextColor: "#FFFFFF"
 					},
 					content: {
-						getContentList: "returnArray.from($.querySelectorAll(\".newsArticle\")).map((elm) => { \n\timg = elm.querySelector(\"img\");\n\t//cat = elm.querySelector(\"[rel='category tag']\");\n\ttitle = elm.querySelector(\"h3\");\n\tlink = elm.querySelector(\"a\");\n\t\t\n\tif (img && title && link) {\n\n\t\treturn {\n\t\t\tcover: img.getAttribute('src'),\n\t\t\tcategories: [title.innerText.split(\"-\")[1]],\n\t\t\ttitle: title.innerText.split(\"-\")[0],\n\t\t\tlink: title.querySelector(\"a\").getAttribute('href')\n\t\t}\n\t}\n});\n"
+                        getMainPage() {
+                            return 'https://freepicks.picksandparlays.net/';
+                        },
+
+					    getContentList(doc) {
+                            return Array.from($.querySelectorAll(".newsArticle")).map((elm) => {
+                                    img = elm.querySelector("img");
+                            //cat = elm.querySelecxtor("[rel='category tag']");
+                            title = elm.querySelector("h3");
+                            link = elm.querySelector("a");
+
+                            if (img && title && link) {
+
+                                return {
+                                    cover: img.getAttribute('src'),
+                                    categories: [title.innerText.split("-")[1]],
+                                    title: title.innerText.split("-")[0],
+                                    link: title.querySelector("a").getAttribute('href')
+                                }
+                            }
+                        });
+
+                        }
 					},
 					width: 500,
 					height: 300,
