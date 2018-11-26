@@ -1,0 +1,117 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title dir="ltr">Test page</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <style>
+        .main {
+            max-width: 1500px;
+            margin: 15px auto;
+        }
+        .label {
+            padding: 10px;
+        }
+    </style>
+    <script src="../dist/contentgen.js"></script>
+</head>
+
+<body>
+<div id="ads"></div>
+
+<script>
+    document.addEventListener('cedatoZPlayerReady', function () {
+        CEDATO.ZPlayer({
+            unit: "Persistent",
+            player: 1968187978,
+            initParams: {
+                contentExternal: () => {
+
+                    let cg = new ContentGenerator({
+                        autoplay: true,
+                        audio: {
+                            src: "https://test.playleaks.com/dev/contentgen/examples/music.mp3",
+                            muted: true
+                        },
+                        customize: {
+                            logo: "https://freepicks.picksandparlays.net/themes/simplestripe/images/logo.png",
+                            backgroundColor: "0x000000",
+                            introTextColor: "#FFFFFF"
+                        },
+                        content: [
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-USATSI-11695635-157016758-lowres.jpg",
+                                "categories": ["NFL Picks & Predictions"],
+                                "title": "Cardinals at Chargers 11/25/18",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nfl-picks/cardinals-at-chargers-112518-nfl-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-nfl-wk-12.jpg",
+                                "categories": ["Schedule, ATS Picks, Betting Odds & Totals"],
+                                "title": "NFL Week 12",
+                                "link": "https://freepicks.picksandparlays.net/betting-odds/nfl-week-12-schedule-ats-picks-betting-odds-and-totals/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-USATSI-11695540-157016758-lowres.jpg",
+                                "categories": [" NFL Picks & Predictions"],
+                                "title": "Steelers at Broncos 11/25/18 ",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nfl-picks/steelers-at-broncos-112518-nfl-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-Colts-111918.jpg",
+                                "categories": [" NFL Picks & Predictions"],
+                                "title": "Dolphins at Colts 11/25/18",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nfl-picks/dolphins-at-colts-112518-nfl-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-Raptors-3.jpg",
+                                "categories": [" NBA Picks & Predictions"],
+                                "title": "Heat at Raptors 11/25/18 ",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nba-picks/heat-at-raptors-112518-nba-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-Lightning-1.jpg",
+                                "categories": ["NHL Picks & Predictions"],
+                                "title": "Devils at Lightning 11/25/18 ",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nhl-picks/devils-at-lightning-112518-nhl-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-USATSI-11660144-157016758-lowres.jpg",
+                                "categories": [" College Basketball Picks & Predictions"],
+                                "title": "Oklahoma State vs LSU 11/25/18 ",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/college-basketball-picks/oklahoma-state-vs-lsu-112518-college-basketball-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-USATSI-11547205-157016758-lowres.jpg",
+                                "categories": [" NFL Picks & Predictions"],
+                                "title": "Packers at Vikings 11/25/18 ",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nfl-picks/packers-at-vikings-112518-nfl-picks-and-predictions/"
+                            },
+                            {
+                                "cover": "https://freepicks.picksandparlays.net/assets/article-photos-2018/11/_resampled/CroppedImage280240-aj-XjhtYR84.png",
+                                "categories": ["Sunday 11/25/18"],
+                                "title": "Craig's NBA Free Video Winners ",
+                                "link": "https://freepicks.picksandparlays.net/more-free-picks/nba-picks/craigs-nba-free-video-winners-sunday-112518/"
+                            }
+                        ],
+                        width: 500,
+                        height: 300,
+                        theme: "articles"
+
+                    });
+
+                    return cg.getDomElement();
+
+                }
+            },
+            position: "ads",
+            playlist: {
+                nextUpTime: [10, 3],
+                mrss: "https://cdn1-97213814.algovid.tv/5be934e46141c_rattic_mrss.xml",
+            }
+        });
+    });
+</script>
+<script async src="https://c.algovid.com/player/z-player.2.1.114.39.js"></script>
+</body>
