@@ -29,7 +29,9 @@
         });
         this.setExtContent(() => {
 
-            let cg = new ContentGenerator({
+            let cg = new ContentGenerator();
+
+            cg.compose({
 					autoplay: true,
 					audio: {
 						src: "https://test.playleaks.com/dev/contentgen/examples/music.mp3",
