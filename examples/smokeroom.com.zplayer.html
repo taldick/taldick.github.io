@@ -1,0 +1,171 @@
+
+<!doctype html>
+
+<body>
+<div id="ads" style="max-width: 600px;"></div>
+
+<script src="../dist/contentgen.js"></script>
+<script>
+    document.addEventListener('cedatoZPlayerReady', function () {
+        CEDATO.ZPlayer({
+            unit: "Persistent",
+            player: 1968187978,
+            initParams: {
+                contentExternal: () => {
+
+                    let cg = new ContentGenerator({
+                        muted: true,
+                        cors: false
+                    });
+
+                    return cg.getDomElement();
+
+
+                }
+            },
+            position: "ads",
+            playlist: {
+                nextUpTime: [10, 3],
+                list: [
+                    {
+                        "url":`data:application/json;base64,${btoa(JSON.stringify({
+                                autoplay: true,
+                                audio: {
+                                    src: "https://test.playleaks.com/dev/contentgen/examples/music.mp3",
+                                    muted: true
+                                },
+                                customize: {
+                                    logo: "http://smokeroom.com/assets/images/white-logo.png",
+                                    backgroundColor: "0x000000",
+                                    introTextColor: "#FFFFFF"
+                                },
+                                content: [
+                                    {
+                                        "cover" : "https://cdn01.dailycaller.com/wp-content/uploads/2018/11/Adriana_Lima_Feature_Shot-1-e1543377909300.jpg",
+                                        "categories" : ["ADRIANA LIMA’S"],
+                                        "title": "TAKE A LOOK BACK AT ADRIANA LIMA’S CAREER WITH VICTORIA’S SECRET",
+                                        "link" : "https://amp.smokeroom.com/2018/11/30/adriana-limas-career-victorias-secret",
+                                        "video" : "https://instagram.ftlv5-1.fna.fbcdn.net/vp/2bced431583fc4ac7b879d648b310c6c/5C04D412/t50.2886-16/45603437_1123242307849444_4475616674191507456_n.mp4"
+                                    },
+                                    {
+                                        "cover" : "https://cdn01.dailycaller.com/wp-content/uploads/2018/01/GettyImages-902774940-e1515472389151.jp",
+                                        "categories" : ["2018 SEC Championship Game"],
+                                        "title": "Game Preview: Will The Tide Turn?",
+                                        "link" : "https://amp.smokeroom.com/2018/11/30/sec-championship-preview-alabama-georgia",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    },
+                                    {
+                                        "cover" : "",
+                                        "categories" : [""],
+                                        "title": "",
+                                        "link" : "",
+                                    }
+
+
+                                ],
+                                width: 500,
+                                height: 300,
+                                theme: "articles"
+
+                            }))
+                        }`,
+                        thumbnail: "https://b2b989d215c701ad63d7-288404e13f895703cf2798bf6ae95228.ssl.cf1.rackcdn.com/619154330017-350.png",
+                        duration: "60",
+                        title: "Smokeroom top articles"
+                    },
+                    {"url":"http://cdn1-97213814.algovid.tv/5be29d5866f40_The_Cheese.mp4","title":"The Cheese","thumbnail":"http://cdn1-97213814.algovid.tv/5be933f010e3b_thecheese.png","duration":"45"},
+                    {
+                        "url":`data:application/json;base64,${btoa(JSON.stringify({
+                            audio: 'music2.mp3',
+                            theme: 'articles',
+                            customize: {
+                                logo: 'https://media.licdn.com/dms/image/C4D0BAQGggmjdXPHH6w/company-logo_200_200/0?e=2159024400&v=beta&t=9YIqPWl4FMoNX8VuYkxcWQOHhBRAbMeX2lhS6anyRtw',
+                                backgroundColor: 0xFFFFFF,
+                                introTextColor: '#444444',
+                                introText: 'Images of Cars'
+                            },
+                            content: [
+                                { cover: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7a09871cc6c6262dabde21e05b8b3f1&auto=format&fit=crop&w=2250&q=80', categories:['Campbell Boulanger'], title: 'Tulsa, United States' },
+                                { cover: 'https://images.unsplash.com/photo-1501066927591-314112b5888e?ixlib=rb-0.3.5&s=48538d4c8562f5584fa48776e46b8a93&auto=format&fit=crop&w=2250&q=80', categories: ['Meik Schneider'], title: 'Zürich, Switzerland' },
+                                { cover: 'https://images.unsplash.com/photo-1514867644123-6385d58d3cd4?ixlib=rb-0.3.5&s=7241bbf91912d0dd0e26f302f37c032e&auto=format&fit=crop&w=2250&q=80', categories: ['Alistair Smith'], title: 'Auckland, New Zealand' }
+                            ]
+                        }))}`,
+                        "title":"Cars",
+                        "thumbnail":"https://images.unsplash.com/photo-1501066927591-314112b5888e?ixlib=rb-0.3.5&s=48538d4c8562f5584fa48776e46b8a93&auto=format&fit=crop&w=2250&q=80",
+                        "duration":"20"
+                    },
+                    {"url":"http://cdn1-97213814.algovid.tv/5be29d4743d39_The_Pirate.mp4","title":"The Pirate","thumbnail":"http://cdn1-97213814.algovid.tv/5be933e15368e_thepirate.png","duration":"45"},
+                    {
+                        "url":`data:application/json;base64,${btoa(JSON.stringify({
+                            audio: 'music3.mp3',
+                            theme: 'articles',
+                            customize: {
+                                logo: 'https://media.licdn.com/dms/image/C4D0BAQGggmjdXPHH6w/company-logo_200_200/0?e=2159024400&v=beta&t=9YIqPWl4FMoNX8VuYkxcWQOHhBRAbMeX2lhS6anyRtw',
+                                backgroundColor: 0xFFFFFF,
+                                introTextColor: '#444444',
+                                introText: 'Images of Dogs'
+                            },
+                            content: [
+                                { cover: 'https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8e64be3b9dcb29b57f6034eeccc6561e&auto=format&fit=crop&w=2250&q=80', categories:['Matt Nelson'], title: 'Greenwich Village, New York, United States' },
+                                { cover: 'https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=61a38f22baeb6a00be6663ab28dc5274&auto=format&fit=crop&w=2249&q=80', categories: ['Eric Ward'], title: 'South Lake Tahoe, United States' },
+                                { cover: 'https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&s=353ad9822df6a8d19c8aede72ae26124&auto=format&fit=crop&w=2250&q=80', categories: ['Jf Brou'], title: 'Lake Louise, Canada' }
+                            ]
+                        }))}`,
+                        "title":"Dogs",
+                        "thumbnail":"https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&s=353ad9822df6a8d19c8aede72ae26124&auto=format&fit=crop&w=2250&q=80",
+                        "duration":"20"
+                    },
+                    {"url":"http://cdn1-97213814.algovid.tv/5be29e064b304_Talent_Show.mp4","title":"Talent Show","thumbnail":"http://cdn1-97213814.algovid.tv/5be933d30b8ad_theshow.png","duration":"45"},
+                    {"url":"http://cdn1-97213814.algovid.tv/5be29eb7dc143_Happy_Birthday.mp4","title":"Happy Birthday","thumbnail":"http://cdn1-97213814.algovid.tv/5be933c54bb9e_birthday.png","duration":"45"},
+                    {"url":"http://cdn1-97213814.algovid.tv/5be29e56ce15c_The_Picture.mp4","title":"The Picture","thumbnail":"http://cdn1-97213814.algovid.tv/5be933b8c800b_thepicture.png","duration":"45"}
+                ]
+            }
+        });
+    });
+
+
+
+
+</script>
+<script async src="https://c.algovid.com/player/z-player.2.1.114.39.js"></script></body>
